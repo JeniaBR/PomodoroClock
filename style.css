@@ -1,0 +1,26 @@
+body {
+    background: teal;
+}
+
+h1 {
+    text-align: center;
+}
+
+#main-wraper{
+    background: tomato;
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.flex-item{
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background: greenyellow;
+
+}
