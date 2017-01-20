@@ -6,19 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
     <h1>Pomodoro Clock</h1>
     <div id="main-wraper">
         <div class="break-length-container flex-item">
-            Break Length
+            <button class="btn" type="submit">-</button>
+            <div id="break-num">5</div>
+            <button class="btn" type="submit">+</button>
         </div>
         <div class="timer-container flex-item">
-            Main Timer
+            <div class=big-clock>
+                21:05
+            </div>
+            <div class="animation-container">
+                <div class="hourglass"></div>
+            </div>
+            <button class="btn hvr-bubble-float-top" type="submit">Start</button>
         </div>
         <div class="session-length-container flex-item">
-            Session Length
+            <button class="btn" type="submit">-</button>
+            <div id="session-num">25</div>
+            <button class="btn" type="submit">+</button>
         </div>
     </div>
 </body>
