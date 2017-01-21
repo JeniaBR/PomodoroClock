@@ -18,6 +18,12 @@ h1 {
     flex-wrap: wrap;
 }
 
+#break-num,
+#session-num {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .flex-item {
     border-radius: 5px;
     text-align: center;
@@ -32,10 +38,16 @@ h1 {
 
 .break-length-container {
     display: flex;
+    font-size: 3em;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .session-length-container {
     display: flex;
+    font-size: 3em;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .big-clock {
@@ -157,4 +169,32 @@ h1 {
 .hvr-bubble-float-top:active:before {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
+}
+
+.btn-plus-minus {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    font-size: 28px;
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.btn-plus-minus:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .timer-container {
+        order: -1;
+    }
+    .session-length-container,
+    .break-length-container {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
