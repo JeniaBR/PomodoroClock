@@ -180,6 +180,7 @@ h1 {
     height: 40px;
     cursor: pointer;
     margin: 15px;
+    padding-top: 5px;
 }
 
 .btn-plus-minus:focus {
