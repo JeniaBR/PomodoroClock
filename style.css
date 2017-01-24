@@ -24,6 +24,15 @@ h1 {
     margin-bottom: auto;
 }
 
+.main-session-container,
+.main-break-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .flex-item {
     border-radius: 5px;
     text-align: center;
@@ -39,19 +48,14 @@ h1 {
 .break-length-container {
     display: flex;
     font-size: 3em;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .session-length-container {
     display: flex;
     font-size: 3em;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .big-clock {
-    
     font-size: 5em;
 }
 

@@ -15,11 +15,15 @@
 <body>
     <h1>Pomodoro Clock</h1>
     <div id="main-wraper">
-        <div class="break-length-container flex-item">
+        <div class="main-break-container">
+            <h2>Break Time</h2>
+            <div class="break-length-container flex-item">
             <button id="btn-break-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
             <div id="break-num"></div>
             <button id="btn-break-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
+        </div>
+        
         <div class="timer-container flex-item">
             <div class="big-clock">
                 <span id="minutes"></span>
@@ -31,11 +35,15 @@
             </div>
             <button class="btn hvr-bubble-float-top" type="submit"><i class="fa fa-play" aria-hidden="true"></i></button>
         </div>
-        <div class="session-length-container flex-item">
+        <div class="main-session-container">
+            <h2>Session Time</h2>
+            <div class="session-length-container flex-item">
             <button id="btn-session-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
             <div id="session-num"></div>
             <button id="btn-session-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
+        </div>
+        
     </div>
 </body>
 
