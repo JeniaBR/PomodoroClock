@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -15,13 +16,15 @@
     <h1>Pomodoro Clock</h1>
     <div id="main-wraper">
         <div class="break-length-container flex-item">
-            <button class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-            <div id="break-num">05</div>
-            <button class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-break-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <div id="break-num"></div>
+            <button id="btn-break-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
         <div class="timer-container flex-item">
-            <div class=big-clock>
-                21:05
+            <div class="big-clock">
+                <span id="minutes"></span>
+                <span >:</span>
+                <span id="seconds"></span>
             </div>
             <div class="animation-container">
                 <div class="hourglass"></div>
@@ -29,9 +32,9 @@
             <button class="btn hvr-bubble-float-top" type="submit"><i class="fa fa-play" aria-hidden="true"></i></button>
         </div>
         <div class="session-length-container flex-item">
-            <button class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-            <div id="session-num">25</div>
-            <button class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="btn-session-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <div id="session-num"></div>
+            <button id="btn-session-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
     </div>
 </body>
