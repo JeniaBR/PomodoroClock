@@ -206,5 +206,7 @@ h1 {
         justify-content: space-around;
         margin-top: 5px;
         margin-bottom: 5px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
