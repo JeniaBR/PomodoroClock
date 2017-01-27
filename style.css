@@ -24,6 +24,10 @@ h1 {
     margin-bottom: auto;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .main-session-container,
 .main-break-container {
     display: flex;

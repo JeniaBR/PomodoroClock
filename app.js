@@ -1,12 +1,9 @@
 $(document).ready(function () {
-    var sessionTime = 1;
+    var sessionTime = 25;
     var breakTime = 5;
-    var currentTime = Date.parse(new Date());
-    var deadline;
-    // var clock = document.getElementsByClassName('big-clock');
-    // var clockMinutes = clock.querySelector('.minutes');
-    // var clockSeconds = clock.querySelector('.seconds');
-    deadline = new Date(currentTime + sessionTime * 60 * 1000);
+    var timeInterval;
+    var isBreakTimeNow;
+
 
     function getRemainingTime(endTime) {
         var time = Date.parse(endTime) - Date.parse(new Date());
@@ -19,17 +16,48 @@ $(document).ready(function () {
         };
     }
 
-    function updateClock() {
+    function updateClock(deadline) {
         var t = getRemainingTime(deadline);
 
-        if (t.total<0) {
+        if (t.total <= 0) {
             clearInterval(timeInterval);
-            t.minutes = 0;
-            t.seconds = 0;
+            if (isBreakTimeNow) {
+                startBreak();
+            } else {
+                startSession();
+            }
+
         }
 
         $('#minutes').html(("0" + t.minutes).slice(-2));
         $('#seconds').html(("0" + t.seconds).slice(-2));
+    }
+
+    function startSession() {
+
+        var currentTime = Date.parse(new Date());
+        var deadline = new Date(currentTime + sessionTime * 60 * 1000);
+        updateClock(deadline);
+        timeInterval = setInterval(updateClock.bind(null, deadline), 1000);
+        $('#start-btn').addClass('hidden');
+        $('#refresh-btn').removeClass('hidden');
+        isBreakTimeNow = true;
+    }
+
+    function startBreak() {
+        var currentTime = Date.parse(new Date());
+        var deadline = new Date(currentTime + breakTime * 60 * 1000);
+        updateClock(deadline);
+        timeInterval = setInterval(updateClock.bind(null, deadline), 1000);
+        isBreakTimeNow = false;
+    }
+
+    function resetPomodoro() {
+        clearInterval(timeInterval);
+        $('#minutes').html(("0" + sessionTime).slice(-2));
+        $('#seconds').html('00');
+        $('#refresh-btn').addClass('hidden');
+        $('#start-btn').removeClass('hidden');
     }
 
     $('#break-num').html(("0" + breakTime).slice(-2));
@@ -75,6 +103,12 @@ $(document).ready(function () {
         $('#minutes').html(("0" + sessionTime).slice(-2));
     });
 
-    var timeInterval = setInterval(updateClock,1000);
+    $('#start-btn').click(function () {
+        startSession();
+    });
+
+    $('#refresh-btn').click(function () {
+        resetPomodoro();
+    });
 
 });
