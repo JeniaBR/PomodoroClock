@@ -1,15 +1,16 @@
 body {
-    background: teal;
+    background: #160C28;
     font-family: 'Roboto', sans-serif;
+    color: floralwhite;
 }
 
 h1 {
     text-align: center;
+    font-size: 5em;
 }
 
 #main-wraper {
     border-radius: 5px;
-    background: tomato;
     margin: auto;
     max-width: 1200px;
     display: flex;
@@ -42,7 +43,6 @@ h1 {
     text-align: center;
     width: 200px;
     margin: 10px;
-    background: greenyellow;
 }
 
 .timer-container {
@@ -60,7 +60,7 @@ h1 {
 }
 
 .big-clock {
-    font-size: 5em;
+    font-size: 10em;
 }
 
 .hourglass {
@@ -73,7 +73,7 @@ h1 {
     left: 35%;
     left: -webkit-calc(50% - 43px);
     left: calc(50% - 43px);
-    border: 3px solid #fff;
+    border: 3px solid floralwhite;
     border-radius: 80px;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
@@ -90,7 +90,7 @@ h1 {
     height: 0px;
     border-style: solid;
     border-width: 37px 22px 0 22px;
-    border-color: #fff transparent transparent transparent;
+    border-color: floralwhite transparent transparent transparent;
 }
 
 .hourglass:after {
@@ -102,7 +102,7 @@ h1 {
     height: 0px;
     border-style: solid;
     border-width: 0 22px 37px 22px;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent floralwhite transparent;
 }
 
 @-webkit-keyframes hourglass {
@@ -125,7 +125,7 @@ h1 {
 
 .btn {
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: floralwhite;
     border: none;
     font-size: 28px;
     padding: 20px;
@@ -161,7 +161,7 @@ h1 {
     top: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #f4511e transparent;
+    border-color: transparent transparent floralwhite transparent;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
@@ -182,7 +182,7 @@ h1 {
 
 .btn-plus-minus {
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: floralwhite;
     border: none;
     font-size: 28px;
     width: 50%;
@@ -208,5 +208,12 @@ h1 {
         margin-bottom: 5px;
         margin-right: auto;
         margin-left: auto;
+    }
+    .big-clock {
+        font-size: 5em;
+    }
+    h1 {
+        text-align: center;
+        font-size: 3em;
     }
 }

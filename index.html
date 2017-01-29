@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="app.js"></script>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -18,19 +19,18 @@
         <div class="main-break-container">
             <h2>Break Time</h2>
             <div class="break-length-container flex-item">
-            <button id="btn-break-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-            <div id="break-num"></div>
-            <button id="btn-break-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <button id="btn-break-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <div id="break-num"></div>
+                <button id="btn-break-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
         </div>
-        </div>
-        
         <div class="timer-container flex-item">
             <div class="big-clock">
                 <span id="minutes"></span>
-                <span >:</span>
+                <span>:</span>
                 <span id="seconds"></span>
             </div>
-            <div class="animation-container">
+            <div class="animation-container hidden">
                 <div class="hourglass"></div>
             </div>
             <button id="start-btn" class="btn hvr-bubble-float-top" type="submit"><i id="btn-icon" class="fa fa-play" aria-hidden="true"></i></button>
@@ -39,12 +39,11 @@
         <div class="main-session-container">
             <h2>Session Time</h2>
             <div class="session-length-container flex-item">
-            <button id="btn-session-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-            <div id="session-num"></div>
-            <button id="btn-session-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <button id="btn-session-minus" class="btn-plus-minus" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <div id="session-num"></div>
+                <button id="btn-session-plus" class="btn-plus-minus" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
         </div>
-        </div>
-        
     </div>
 </body>
 

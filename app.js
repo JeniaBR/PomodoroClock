@@ -1,3 +1,22 @@
+function setColor(selectors, color) {
+
+    $(selectors).animate({
+        backgroundColor: color
+    }, 500);
+}
+
+function hideAndShow(toHide) {
+    if (toHide) {
+        $('.main-break-container').addClass('hidden');
+        $('.main-session-container').addClass('hidden');
+        $('.animation-container').removeClass('hidden');
+    } else {
+        $('.main-break-container').removeClass('hidden');
+        $('.main-session-container').removeClass('hidden');
+        $('.animation-container').addClass('hidden');
+    }
+}
+
 $(document).ready(function () {
     var sessionTime = 25;
     var breakTime = 5;
@@ -42,6 +61,7 @@ $(document).ready(function () {
         $('#start-btn').addClass('hidden');
         $('#refresh-btn').removeClass('hidden');
         isBreakTimeNow = true;
+        setColor('body', '#2B9720');
     }
 
     function startBreak() {
@@ -50,6 +70,8 @@ $(document).ready(function () {
         updateClock(deadline);
         timeInterval = setInterval(updateClock.bind(null, deadline), 1000);
         isBreakTimeNow = false;
+
+        setColor('body', '#D95D39');
     }
 
     function resetPomodoro() {
@@ -58,6 +80,7 @@ $(document).ready(function () {
         $('#seconds').html('00');
         $('#refresh-btn').addClass('hidden');
         $('#start-btn').removeClass('hidden');
+        setColor('body', '#160C28');
     }
 
     $('#break-num').html(("0" + breakTime).slice(-2));
@@ -105,10 +128,12 @@ $(document).ready(function () {
 
     $('#start-btn').click(function () {
         startSession();
+        hideAndShow(true);
     });
 
     $('#refresh-btn').click(function () {
         resetPomodoro();
+        hideAndShow(false);
     });
 
 });
